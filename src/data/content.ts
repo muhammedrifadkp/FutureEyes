@@ -1,0 +1,136 @@
+export const siteData = {
+  company: {
+    name: "Future Eyes General Trading FZ-LLC",
+    location: "Sharjah, UAE",
+    phone: "+971 50 9423 786",
+    email: "futureeyestr@gmail.com",
+    manager: "Mohammed Sinan",
+    whatsappUrl: "https://wa.me/971509423786",
+  },
+  navigation: [
+    { name: "Home", href: "/" },
+    { name: "Products", href: "/products" },
+    { name: "Services", href: "/services" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ],
+  hero: {
+    heading: "The Complete Thermal Paper & Label Solution",
+    subheading: "Thermal POS Rolls 80×80 mm · Barcode Labels (DT & Thermal Transfer) · Weightscale Labels (Plain & Printed)",
+  },
+  products: [
+    {
+      id: "thermal-pos-rolls-80x80",
+      name: "Thermal POS Rolls 80×80 mm",
+      shortDescription: "Ideal for receipts, offering fast printing, high-quality text, and convenience.",
+      description: "Our premium 80x80mm thermal POS rolls are designed for high-volume retail and hospitality environments. They ensure crisp, clear printing and smooth operation in all standard thermal printers.",
+      image: "/images/pos-roll.jpg",
+      specs: {
+        size: "80mm x 80mm",
+        core: "12mm",
+        material: "Premium Thermal Paper",
+        compatibility: "All standard thermal receipt printers",
+      },
+      applications: ["Supermarkets", "Restaurants", "Retail Stores"],
+      category: "Thermal Paper",
+    },
+    {
+      id: "barcode-labels-dt",
+      name: "Barcode Labels (Direct Thermal)",
+      shortDescription: "Direct thermal labels for short-term use.",
+      description: "High-quality direct thermal labels perfect for shipping labels, receipts, and short-term product labeling. No ribbon required.",
+      image: "/images/shipping-label.jpg",
+      specs: {
+        type: "Direct Thermal",
+        adhesive: "Permanent / Removable",
+        core: "25mm / 40mm / 76mm",
+      },
+      applications: ["Shipping Labels", "Food Labeling", "Retail Pricing"],
+      category: "Labels",
+    },
+    {
+      id: "barcode-labels-tt",
+      name: "Barcode Labels (Thermal Transfer)",
+      shortDescription: "Durable labels for long-lasting applications.",
+      description: "Thermal transfer labels requiring a ribbon, offering superior durability and resistance to heat, moisture, and chemicals.",
+      image: "/images/shipping-label.jpg",
+      specs: {
+        type: "Thermal Transfer",
+        material: "Paper / PP / PE",
+        ribbon: "Required (Wax / Wax-Resin / Resin)",
+      },
+      applications: ["Asset Tracking", "Inventory Management", "Outdoor Labeling"],
+      category: "Labels",
+    },
+    {
+      id: "weightscale-labels",
+      name: "Weightscale Labels",
+      shortDescription: "Plain or pre-printed labels for weighing scales.",
+      description: "Reliable weight scale labels ensuring accurate barcode scanning and clear text. Available plain or pre-printed with your logo.",
+      image: "/images/shipping-label.jpg",
+      specs: {
+        compatibility: "Digi, Mettler Toledo, Bizerba, etc.",
+        print: "Plain or Pre-printed up to 4 colors",
+      },
+      applications: ["Supermarket Weighing Scales", "Deli Counters"],
+      category: "Labels",
+    },
+    {
+      id: "ribbons-foils",
+      name: "Ribbons & Foils",
+      shortDescription: "High-quality thermal transfer ribbons.",
+      description: "Premium wax, wax-resin, and resin ribbons for thermal transfer printing, ensuring durable and sharp prints.",
+      image: "/images/paper-roll.jpg",
+      specs: {
+        types: ["Wax", "Wax-Resin", "Resin"],
+        colors: ["Black", "Gold", "Silver", "Red", "Blue"],
+      },
+      applications: ["Product Labeling", "Luxury Packaging"],
+      category: "Consumables",
+    },
+  ],
+  services: [
+    {
+      title: "Graphic Design",
+      items: ["Logo Branding", "Branding Kits", "Wall Branding", "Vehicle Branding", "Product Branding", "Digital Branding"],
+      icon: "PenTool",
+      image: "/images/graphic-design.jpg",
+    },
+    {
+      title: "Printing & Packaging",
+      items: ["Offset Printing", "Digital Printing", "Screen Printing", "Large Format", "Packaging & Labels", "Rigid Boxes", "Paper Bags"],
+      icon: "Printer",
+      image: "/images/printing-press.jpg",
+    },
+    {
+      title: "Sign & Displays",
+      items: ["3D Signs", "Banners", "Flex & Billboards", "Fabrications", "Displays", "Vinyl Printing", "Promotion Stands"],
+      icon: "Monitor",
+      image: "/images/warehouse.jpg",
+    },
+    {
+      title: "Digital & Web",
+      items: ["Website Design", "SEO", "Digital Marketing", "Social Media Management"],
+      icon: "Globe",
+      image: "/images/graphic-design.jpg",
+    },
+  ],
+  features: [
+    {
+      title: "Fast, Consistent Quality",
+      description: "We ensure every roll and label meets high standards for clear, trouble-free printing.",
+    },
+    {
+      title: "Reliable Stock & Delivery",
+      description: "Our local warehousing in Sharjah ensures prompt delivery across the UAE.",
+    },
+    {
+      title: "Custom Solutions",
+      description: "From custom-printed labels to bespoke packaging, we tailor our products to your brand.",
+    },
+    {
+      title: "One-Stop Shop",
+      description: "Combine your consumable needs with our professional design and printing services.",
+    },
+  ],
+};

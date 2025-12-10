@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-fe-navy-dark: #0a192f;
+  --color-fe-blue: #0056b3;
+  --color-fe-accent: #00d4ff;
+  --color-fe-deep: #020c1b;
+  --color-fe-light: #e6f1ff;
+  
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --background: #ffffff;
+  --foreground: #0a192f;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a192f;
+    --foreground: #e6f1ff;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply bg-fe-blue text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-fe-blue text-fe-blue px-6 py-3 rounded-lg hover:bg-fe-blue hover:text-white transition-colors font-semibold;
 }
