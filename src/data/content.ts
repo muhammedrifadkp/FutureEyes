@@ -2,10 +2,10 @@ export const siteData = {
   company: {
     name: "Future Eyes General Trading FZ-LLC",
     location: "Sharjah, UAE",
-    phone: "+971 50 9423 786",
+    phone: "+971 55 8433 786",
     email: "futureeyestr@gmail.com",
     manager: "Mohammed Sinan",
-    whatsappUrl: "https://wa.me/971509423786",
+    whatsappUrl: "https://wa.me/971558433786",
   },
   navigation: [
     { name: "Home", href: "/" },
@@ -24,7 +24,7 @@ export const siteData = {
       name: "Thermal POS Rolls 80×80 mm",
       shortDescription: "Ideal for receipts, offering fast printing, high-quality text, and convenience.",
       description: "Our premium 80x80mm thermal POS rolls are designed for high-volume retail and hospitality environments. They ensure crisp, clear printing and smooth operation in all standard thermal printers.",
-      image: "/images/pos-roll.jpg",
+      image: "https://image.made-in-china.com/202f0j00qpmbzYifHMkI/Factory-Business-80-80mm-Thermal-POS-ATM-Receipt-Cashier-Cash-Register-Paper-Roll.webp",
       specs: {
         size: "80mm x 80mm",
         core: "12mm",
@@ -39,7 +39,7 @@ export const siteData = {
       name: "Barcode Labels (Direct Thermal)",
       shortDescription: "Direct thermal labels for short-term use.",
       description: "High-quality direct thermal labels perfect for shipping labels, receipts, and short-term product labeling. No ribbon required.",
-      image: "/images/shipping-label.jpg",
+      image: "https://5.imimg.com/data5/SELLER/Default/2023/11/363420328/KC/NX/FZ/76401681/4-x-8-direct-thermal-labels-100-mm-x-200-mm.jpg",
       specs: {
         type: "Direct Thermal",
         adhesive: "Permanent / Removable",
@@ -53,7 +53,7 @@ export const siteData = {
       name: "Barcode Labels (Thermal Transfer)",
       shortDescription: "Durable labels for long-lasting applications.",
       description: "Thermal transfer labels requiring a ribbon, offering superior durability and resistance to heat, moisture, and chemicals.",
-      image: "/images/shipping-label.jpg",
+      image: "https://www.sundata.in/public/blogs-images/lv_813931493.jpg",
       specs: {
         type: "Thermal Transfer",
         material: "Paper / PP / PE",
@@ -67,7 +67,7 @@ export const siteData = {
       name: "Weightscale Labels",
       shortDescription: "Plain or pre-printed labels for weighing scales.",
       description: "Reliable weight scale labels ensuring accurate barcode scanning and clear text. Available plain or pre-printed with your logo.",
-      image: "/images/shipping-label.jpg",
+      image: "https://images-cdn.ubuy.co.in/663fab9a1ef1e920245f40fe-cas-s-2000-jr-price-computing.jpg",
       specs: {
         compatibility: "Digi, Mettler Toledo, Bizerba, etc.",
         print: "Plain or Pre-printed up to 4 colors",
@@ -80,7 +80,7 @@ export const siteData = {
       name: "Ribbons & Foils",
       shortDescription: "High-quality thermal transfer ribbons.",
       description: "Premium wax, wax-resin, and resin ribbons for thermal transfer printing, ensuring durable and sharp prints.",
-      image: "/images/paper-roll.jpg",
+      image: "https://marvel-b1-cdn.bc0a.com/f00000000271084/www.diagraph.com/portals/0/Images/Service/ribbon-prodpg.jpg",
       specs: {
         types: ["Wax", "Wax-Resin", "Resin"],
         colors: ["Black", "Gold", "Silver", "Red", "Blue"],

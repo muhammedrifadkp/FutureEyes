@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ShoppingBag } from "lucide-react";
 import { siteData } from "@/data/content";
 import { useQuote } from "@/context/QuoteContext";
@@ -10,21 +11,25 @@ export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const { items, toggleDrawer } = useQuote();
+    const pathname = usePathname();
 
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
-        };
+        const handleScroll = () => setIsScrolled(window.scrollY > 20);
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const isActive = (href: string) => pathname === href;
+
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-md shadow-md py-2" : "bg-white py-4"
-                }`}
+            className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300
+      ${isScrolled
+                    ? "bg-white/80 backdrop-blur-xl shadow-md py-2"
+                    : "bg-white py-4"}`}
         >
             <div className="container-custom flex items-center justify-between">
+
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2">
                     {/* Placeholder for Logo if image not available, or text */}
@@ -35,15 +40,28 @@ export function Header() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8">
-                    {siteData.navigation.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className="text-sm font-medium text-gray-700 hover:text-fe-blue transition-colors uppercase tracking-wide"
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
+                    {siteData.navigation.map((item) => {
+                        const active = isActive(item.href);
+                        return (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className={`relative text-sm font-semibold uppercase tracking-wide transition-all
+                ${active
+                                        ? "text-fe-blue"
+                                        : "text-gray-700 hover:text-fe-blue"
+                                    }`}
+                            >
+                                {item.name}
+
+                                {/* Active underline */}
+                                <span
+                                    className={`absolute -bottom-1 left-0 h-[2px] bg-fe-blue transition-all duration-300
+                  ${active ? "w-full" : "w-0 group-hover:w-full"}`}
+                                />
+                            </Link>
+                        );
+                    })}
                 </nav>
 
                 {/* Actions */}
@@ -54,35 +72,44 @@ export function Header() {
                     >
                         <ShoppingBag className="w-6 h-6" />
                         {items.length > 0 && (
-                            <span className="absolute top-0 right-0 bg-fe-blue text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
-                                {items.reduce((acc, item) => acc + item.quantity, 0)}
+                            <span className="absolute -top-1 -right-1 bg-fe-blue text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                                {items.reduce((a, i) => a + i.quantity, 0)}
                             </span>
                         )}
                     </button>
 
-                    {/* Mobile Menu Toggle */}
+                    {/* Mobile Toggle */}
                     <button
-                        className="md:hidden p-2 text-gray-700"
+                        className="md:hidden p-2 text-fe-blue"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     >
-                        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        {isMobileMenuOpen ? <X /> : <Menu />}
                     </button>
                 </div>
             </div>
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t shadow-lg p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
-                    {siteData.navigation.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className="text-lg font-medium text-gray-800 py-2 border-b border-gray-100"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
+                <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t">
+                    <nav className="flex flex-col">
+                        {siteData.navigation.map((item) => {
+                            const active = isActive(item.href);
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className={`px-6 py-4 text-lg font-medium transition-colors
+                  ${active
+                                            ? "bg-fe-blue/10 text-fe-blue border-l-4 border-fe-blue"
+                                            : "text-gray-800 hover:bg-gray-50"
+                                        }`}
+                                >
+                                    {item.name}
+                                </Link>
+                            );
+                        })}
+                    </nav>
                 </div>
             )}
         </header>

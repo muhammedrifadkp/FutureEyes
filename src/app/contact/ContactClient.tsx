@@ -52,7 +52,7 @@ export default function ContactPage() {
                 <div className="grid lg:grid-cols-2 gap-16">
                     {/* Contact Form */}
                     <div>
-                        <h2 className="text-2xl font-bold text-fe-navy-dark mb-6">Send us a Message</h2>
+                        <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
 
                         {!submitted ? (
                             <form onSubmit={handleSubmit} className="space-y-6">

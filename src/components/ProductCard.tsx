@@ -23,24 +23,15 @@ export function ProductCard({
         <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full">
             <div className="relative h-48 w-full bg-gray-100 overflow-hidden">
                 {/* Placeholder for image if not found, or actual image */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-50">
-                    {/* In a real app, use next/image. For now, a placeholder div or img tag */}
-                    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                        <span className="text-sm">Image: {name}</span>
-                    </div>
-                </div>
-                {/* If we had real images we would use:
-        <Image
-          src={image}
-          alt={name}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-        */}
+                <img
+                    src={image}
+                    alt={name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
             </div>
 
             <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-xl font-bold text-fe-navy-dark mb-2 group-hover:text-fe-blue transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-fe-blue transition-colors">
                     {name}
                 </h3>
                 <p className="text-gray-600 text-sm mb-4 flex-1 line-clamp-3">

@@ -26,7 +26,7 @@ export default function AboutPage() {
             <section className="container-custom py-16">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6 text-gray-600 leading-relaxed">
-                        <h2 className="text-3xl font-bold text-fe-navy-dark">Who We Are</h2>
+                        <h2 className="text-3xl font-bold">Who We Are</h2>
                         <p>
                             Future Eyes General Trading FZ-LLC is a premier supplier of thermal paper rolls, barcode labels, and comprehensive printing solutions based in Sharjah, UAE. We serve a diverse range of industries including retail, hospitality, logistics, and healthcare across the GCC region.
                         </p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
             {/* Leadership */}
             <section className="container-custom py-16">
-                <h2 className="text-3xl font-bold text-fe-navy-dark mb-12 text-center">Leadership</h2>
+                <h2 className="text-3xl font-bold mb-12 text-center">Leadership</h2>
                 <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <div className="h-48 bg-fe-navy-dark flex items-center justify-center">
                         <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center text-fe-navy-dark font-bold text-3xl">

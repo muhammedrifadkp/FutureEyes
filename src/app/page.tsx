@@ -75,7 +75,7 @@ export default function Home() {
             {/* Key Products Preview */}
             <section className="container-custom">
                 <div className="text-center max-w-2xl mx-auto mb-12">
-                    <h2 className="text-3xl font-bold text-fe-navy-dark mb-4">Our Core Products</h2>
+                    <h2 className="text-3xl font-bold mb-4">Our Core Products</h2>
                     <p className="text-gray-600">
                         High-quality thermal paper and labels for every business need.
                     </p>
@@ -140,7 +140,7 @@ export default function Home() {
             <section className="container-custom">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
                     <div>
-                        <h2 className="text-3xl font-bold text-fe-navy-dark mb-4">Our Services</h2>
+                        <h2 className="text-3xl font-bold mb-4">Our Services</h2>
                         <p className="text-gray-600 max-w-xl">
                             Beyond supplies, we offer comprehensive design, printing, and digital services to elevate your brand.
                         </p>

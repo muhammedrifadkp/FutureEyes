@@ -42,13 +42,13 @@ export default function ProductsPage() {
                                             {product.category}
                                         </span>
                                     </div>
-                                    <h2 className="text-3xl font-bold text-fe-navy-dark mb-4">{product.name}</h2>
+                                    <h2 className="text-3xl font-bold mb-4">{product.name}</h2>
                                     <p className="text-gray-600 mb-6 text-lg leading-relaxed">
                                         {product.description}
                                     </p>
 
                                     <div className="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-100">
-                                        <h3 className="font-bold text-fe-navy-dark mb-4">Specifications</h3>
+                                        <h3 className="font-bold text-gray-900 mb-4">Specifications</h3>
                                         <div className="grid sm:grid-cols-2 gap-4">
                                             {Object.entries(product.specs).map(([key, value]) => (
                                                 <div key={key}>
@@ -62,7 +62,7 @@ export default function ProductsPage() {
                                     </div>
 
                                     <div className="mb-8">
-                                        <h3 className="font-bold text-fe-navy-dark mb-3">Ideal Applications</h3>
+                                        <h3 className="font-bold mb-3">Ideal Applications</h3>
                                         <ul className="grid sm:grid-cols-2 gap-2">
                                             {product.applications.map((app, idx) => (
                                                 <li key={idx} className="flex items-center gap-2 text-gray-600">
