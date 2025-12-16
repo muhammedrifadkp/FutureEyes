@@ -64,7 +64,7 @@ export default function ContactPage() {
                                             id="name"
                                             name="name"
                                             required
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all bg-white text-gray-900"
                                             value={formData.name}
                                             onChange={handleChange}
                                         />
@@ -75,7 +75,7 @@ export default function ContactPage() {
                                             type="text"
                                             id="company"
                                             name="company"
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all bg-white text-gray-900"
                                             value={formData.company}
                                             onChange={handleChange}
                                         />
@@ -90,7 +90,7 @@ export default function ContactPage() {
                                             id="email"
                                             name="email"
                                             required
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all bg-white text-gray-900"
                                             value={formData.email}
                                             onChange={handleChange}
                                         />
@@ -102,7 +102,7 @@ export default function ContactPage() {
                                             id="phone"
                                             name="phone"
                                             required
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all bg-white text-gray-900"
                                             value={formData.phone}
                                             onChange={handleChange}
                                         />
@@ -114,7 +114,7 @@ export default function ContactPage() {
                                     <select
                                         id="interest"
                                         name="interest"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all bg-white text-gray-900"
                                         value={formData.interest}
                                         onChange={handleChange}
                                     >
@@ -134,7 +134,7 @@ export default function ContactPage() {
                                         name="message"
                                         rows={4}
                                         required
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fe-blue focus:border-fe-blue outline-none transition-all bg-white text-gray-900"
                                         value={formData.message}
                                         onChange={handleChange}
                                     ></textarea>
@@ -221,19 +221,18 @@ export default function ContactPage() {
                         </div>
 
                         {/* Map Placeholder */}
-                        <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center text-gray-500 relative overflow-hidden group cursor-pointer">
-                            <div className="absolute inset-0 bg-gray-300 flex items-center justify-center group-hover:bg-gray-400 transition-colors">
-                                <MapPin className="w-12 h-12 text-gray-500" />
-                                <span className="ml-2 font-semibold">View on Google Maps</span>
-                            </div>
-                            {/* In a real app, embed Google Map iframe here */}
-                            <a
-                                href="https://maps.google.com/?q=Sharjah,UAE"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="absolute inset-0 z-10"
-                                aria-label="View on Google Maps"
-                            ></a>
+                        {/* Google Map */}
+                        <div className="bg-gray-200 rounded-2xl h-80 overflow-hidden shadow-sm border border-gray-100">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.09702213608!2d55.39396740660724!3d25.352496884351364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f40076a91d1%3A0x6d9f75323862283e!2sSharjah%2C%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Future Eyes Location in Sharjah"
+                            ></iframe>
                         </div>
                     </div>
                 </div>

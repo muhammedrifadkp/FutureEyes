@@ -37,11 +37,25 @@ export default function AboutPage() {
                             Beyond supplies, we offer a full suite of creative services, from graphic design and branding to large-format printing and packaging. We aim to be your one-stop shop for all your business visibility and operational needs.
                         </p>
                     </div>
-                    <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center text-gray-400">
-                        {/* Placeholder for About Image */}
-                        <div className="text-center">
-                            <Users className="w-16 h-16 mx-auto mb-4" />
-                            <p>Team / Office Image</p>
+                    <div className="relative w-full max-w-lg mx-auto aspect-[1.75/1] perspective-1000 group cursor-pointer">
+                        <div className="relative w-full h-full transition-transform duration-700 transform-style-3d group-hover:rotate-y-180">
+                            {/* Front Face */}
+                            <div className="absolute inset-0 w-full h-full backface-hidden">
+                                <img
+                                    src="/logos/card-front.png"
+                                    alt="Future Eyes Business Card Front"
+                                    className="w-full h-full object-contain drop-shadow-2xl rounded-xl"
+                                />
+                            </div>
+
+                            {/* Back Face */}
+                            <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
+                                <img
+                                    src="/logos/card-back.png"
+                                    alt="Future Eyes Business Card Back"
+                                    className="w-full h-full object-contain drop-shadow-2xl rounded-xl"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

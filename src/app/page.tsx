@@ -56,7 +56,7 @@ export default function Home() {
 
                     <div className="relative">
                         {/* Hero Image Composition */}
-                        <div className="relative z-10 bg-white/5 backdrop-blur-sm p-6 rounded-3xl border border-white/10 shadow-2xl">
+                        <div className="relative z-10  bg-white/5 backdrop-blur-sm p-6 rounded-3xl border border-white/10 shadow-2xl">
                             <div className="aspect-video bg-gray-800 rounded-xl overflow-hidden relative">
                                 <img
                                     src="/images/warehouse.jpg"

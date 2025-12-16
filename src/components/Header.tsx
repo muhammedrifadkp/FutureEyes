@@ -21,6 +21,16 @@ export function Header() {
 
     const isActive = (href: string) => pathname === href;
 
+    const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+            if (pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            }
+        };
+
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300
@@ -31,11 +41,14 @@ export function Header() {
             <div className="container-custom flex items-center justify-between">
 
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2">
+                <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2">
                     {/* Placeholder for Logo if image not available, or text */}
-                    <div className="font-bold text-2xl text-fe-navy-dark tracking-tight">
-                        Future<span className="text-fe-blue">Eyes</span>
-                    </div>
+                    {/* Logo Image */}
+                    <img
+                        src="/logos/title-blue.png"
+                        alt="Future Eyes"
+                        className="h-12 w-auto object-contain"
+                    />
                 </Link>
 
                 {/* Desktop Nav */}

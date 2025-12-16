@@ -1,17 +1,39 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteData } from "@/data/content";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
+    const pathname = usePathname();
+
+    const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (pathname === "/") {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }
+    };
+
     return (
         <footer className="bg-fe-navy-dark text-white pt-16 pb-8">
             <div className="container-custom grid grid-cols-1 md:grid-cols-3 gap-12">
                 {/* Brand */}
                 <div>
-                    <h3 className="text-2xl font-bold mb-4">
-                        Future<span className="text-fe-accent">Eyes</span>
-                    </h3>
+                    {/* Brand Logo */}
+                    <Link href="/" onClick={handleLogoClick}>
+                        <div className="mb-6">
+                            <img
+                                src="/logos/title-and-eye-icon-white.png"
+                                alt="Future Eyes"
+                                className="h-20 w-auto object-contain object-left"
+                            />
+                        </div>
+                    </Link>
                     <p className="text-gray-300 mb-6 max-w-sm">
                         Your trusted partner for thermal paper, labels, and complete printing & packaging solutions in the UAE.
                     </p>

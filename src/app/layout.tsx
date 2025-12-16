@@ -22,6 +22,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Future Eyes General Trading FZ-LLC",
   description: "The Complete Thermal Paper & Label Solution in Sharjah, UAE.",
+  icons: {
+    icon: "/logos/eye-icon.png",
+  },
 };
 
 export default function RootLayout({
