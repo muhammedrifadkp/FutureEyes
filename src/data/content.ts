@@ -4,7 +4,7 @@ export const siteData = {
     location: "Sharjah, UAE",
     phone: "+971 55 8433 786",
     email: "futureeyestr@gmail.com",
-    manager: "Mohammed Sinan",
+    manager: "SALMATH ANSHANA",
     whatsappUrl: "https://wa.me/971558433786",
   },
   navigation: [

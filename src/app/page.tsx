@@ -220,15 +220,19 @@ export default function Home() {
 
                         <div className="bg-fe-navy-dark p-8 md:p-12 text-white flex flex-col items-center justify-center text-center">
                             <div className="bg-white p-4 rounded-xl mb-6">
-                                {/* QR Code Placeholder */}
-                                <div className="w-32 h-32 bg-gray-200 flex items-center justify-center text-gray-800 font-bold text-xs">
-                                    QR CODE
+                                {/* QR Code Image */}
+                                <div className="w-32 h-32 bg-white flex items-center justify-center overflow-hidden">
+                                    <img
+                                        src="/images/qrcodewtsapp.png"
+                                        alt="WhatsApp QR Code"
+                                        className="w-full h-full object-contain"
+                                    />
                                 </div>
                             </div>
                             <h3 className="text-xl font-bold mb-1">{siteData.company.manager}</h3>
-                            <p className="text-fe-accent text-sm mb-6">Manager</p>
+                            <p className="text-fe-accent text-sm mb-6">Managing Director</p>
                             <p className="text-sm text-gray-300 max-w-xs">
-                                Scan to save contact details or visit our website.
+                                Scan to save contact details or visit our WhatsApp.
                             </p>
                         </div>
                     </div>

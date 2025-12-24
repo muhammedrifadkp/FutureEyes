@@ -104,14 +104,14 @@ export default function AboutPage() {
                 <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                     <div className="h-48 bg-fe-navy-dark flex items-center justify-center">
                         <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center text-fe-navy-dark font-bold text-3xl">
-                            MS
+                            SA
                         </div>
                     </div>
                     <div className="p-8 text-center">
                         <h3 className="text-2xl font-bold text-fe-navy-dark">{siteData.company.manager}</h3>
-                        <p className="text-fe-blue font-medium mb-4">Manager</p>
+                        <p className="text-fe-blue font-medium mb-4">Managing Director</p>
                         <p className="text-gray-600 text-sm">
-                            With years of experience in the trading and printing industry, Mohammed leads Future Eyes with a focus on quality, integrity, and customer satisfaction.
+                            With years of experience in the trading and printing industry, Salmath leads Future Eyes with a focus on quality, integrity, and customer satisfaction.
                         </p>
                     </div>
                 </div>
